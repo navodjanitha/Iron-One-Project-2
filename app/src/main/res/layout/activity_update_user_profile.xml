@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateUserProfile">
+
+
+    <RelativeLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layoutHead"
+                    android:background="@color/blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="40dp"
+                            android:text="Update User Information"
+                            android:gravity="center"
+                            android:textSize="25dp"
+                            android:textColor="@color/colorWhite"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/image_view"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_profile_pic"
+                        android:layout_centerInParent="true"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"/>
+
+
+                    <EditText
+                        android:hint="Enter Name"
+                        android:textColorHint="@color/colorWhite"
+                        android:textAlignment="center"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/image_view"
+                        tools:text="Belal Khan"
+                        android:enabled="true"
+                        android:id="@+id/edit_text_name"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"/>
+
+
+                    <ProgressBar
+                        android:visibility="invisible"
+                        android:id="@+id/progressbar_pic"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:padding="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:layout_below="@id/layoutHead"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent">
+
+
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_email"
+                            android:hint="Email" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Mobile">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:hint="Mobile" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:hint="Address">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_home"
+                            android:hint="Address" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/gender_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        app:endIconMode="dropdown_menu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:hint="Gender">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/dropdown_item"
+                            android:drawableStart="@drawable/ic_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:visibility="invisible"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/update_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:text="Update Information" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+    </ScrollView>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
